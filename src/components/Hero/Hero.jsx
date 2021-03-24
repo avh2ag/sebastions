@@ -41,13 +41,13 @@ const Header = () => {
               </Link>
             </span>
           </p>
-          <p className="hero-cta">
+          {/* <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
               <Link to="stories" smooth duration={1000} offset={SCROLL_OFFSET}>
                 Short Stories
               </Link>
             </span>
-          </p>
+          </p> */}
         </Fade>
       </Container>
     </section>

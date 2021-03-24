@@ -49,7 +49,7 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
+                      {/* <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--hero"
@@ -67,7 +67,7 @@ const Projects = () => {
                         >
                           Source Code
                         </a>
-                      )}
+                      )} */}
                     </div>
                   </Fade>
                 </Col>
@@ -100,7 +100,8 @@ const Projects = () => {
                           }}
                         >
                           <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
+                            {/* <ProjectImg alt={title} filename={img} /> */}
+                            <iframe src="https://open.spotify.com/embed/artist/2llQYWpEsMBFJDxFd3Tgx6" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                           </div>
                         </Tilt>
                       </a>

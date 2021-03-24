@@ -14,23 +14,23 @@ function App() {
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
-  const [footer, setFooter] = useState({});
+  // const [footer, setFooter] = useState({});
 
   useEffect(() => {
     setHero({ ...heroData });
     setAbout({ ...aboutData });
     setProjects([...projectsData]);
     setContact({ ...contactData });
-    setFooter({ ...footerData });
+    // setFooter({ ...footerData });
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+    <PortfolioProvider value={{ hero, about, projects, contact }}>
       <Hero />
       <About />
       <Projects />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </PortfolioProvider>
   );
 }

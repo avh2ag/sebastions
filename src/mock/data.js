@@ -11,18 +11,18 @@ export const headData = {
 export const heroData = {
   title: '',
   name: 'The Sebastions',
-  subtitle: 'Make good muzik',
+  subtitle: '',
   cta: 'Discover',
 };
 
 // ABOUT DATA
-// export const aboutData = {
-//   img: 'profile.jpg',
-//   paragraphOne: '',
-//   paragraphTwo: '',
-//   paragraphThree: '',
-//   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
-// };
+export const aboutData = {
+  img: 'sebastions-img.jpeg',
+  paragraphOne: '',
+  paragraphTwo: '',
+  paragraphThree: '',
+  // resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+};
 
 // PROJECTS DATA
 export const projectsData = [
@@ -31,28 +31,28 @@ export const projectsData = [
     img: 'project.jpg',
     title: 'Music',
     section: 'music',
-    info: '',
+    info: 'The Sebastions released their first EP in 2021. Stay tuned for the latest updates.',
     info2: '',
     url: '',
     repo: '', // if no repo, the button will not show up
   },
-  {
-    id: nanoid(),
-    img: 'project.jpg',
-    title: 'Short Stories',
-    section: 'stories',
-    info: '',
-    info2: '',
-    url: '',
-    repo: '#', // if no repo, the button will not show up
-  },
+  // {
+  //   id: nanoid(),
+  //   img: 'project.jpg',
+  //   title: 'Short Stories',
+  //   section: 'stories',
+  //   info: '',
+  //   info2: '',
+  //   url: '',
+  //   repo: '#', // if no repo, the button will not show up
+  // },
 ];
 
 // CONTACT DATA
 export const contactData = {
-  cta: '',
+  cta: 'Get in Touch',
   btn: '',
-  email: '',
+  email: 'jyusician@gmail.com',
 };
 
 // FOOTER DATA
