@@ -18,7 +18,7 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'sebastions-img.jpeg',
-  paragraphOne: '',
+  paragraphOne: 'The Sebastions is a project based out of Virginia, USA',
   paragraphTwo: '',
   paragraphThree: '',
   // resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
