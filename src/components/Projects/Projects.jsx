@@ -3,8 +3,6 @@ import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
-import ProjectImg from '../Image/ProjectImg';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -28,7 +26,7 @@ const Projects = () => {
         <div className="project-wrapper">
           {/* <Title title="Projects" /> */}
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id, section } = project;
+            const { title, info, info2, url, id, section } = project;
 
             return (
               <Row key={id}>
@@ -101,7 +99,15 @@ const Projects = () => {
                         >
                           <div data-tilt className="thumbnail rounded">
                             {/* <ProjectImg alt={title} filename={img} /> */}
-                            <iframe src="https://open.spotify.com/embed/artist/2llQYWpEsMBFJDxFd3Tgx6" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            <iframe
+                              src="https://open.spotify.com/embed/artist/2llQYWpEsMBFJDxFd3Tgx6"
+                              width="500"
+                              height="500"
+                              frameBorder="0"
+                              allowtransparency="true"
+                              allow="encrypted-media"
+                              title="Spotify Web Player"
+                            />
                           </div>
                         </Tilt>
                       </a>

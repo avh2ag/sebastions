@@ -18,12 +18,44 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'sebastions-img.jpeg',
-  paragraphOne: 'The Sebastions is a project based out of Virginia, USA',
+  paragraphOne:
+    'The Sebastions are a neo-grunge, post-punk band from Alexandria, VA. Band frontman Joey Yusician recorded and released the band’s Here for Now EP in March, 2021. He then recruited and has been working with Peter, Patrick, Steve, and Corron to prepare to perform the band’s material in the greater DC area. The band’s eclectic background has converged into a show-stopping  sound that rivals and is reminiscent of The Strokes, The Smiths, and Velvet Underground.',
   paragraphTwo: '',
   paragraphThree: '',
-  // resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 
+export const membersData = [
+  {
+    name: 'Joey Yusician',
+    bio:
+      'Joey began playing guitar while studying at the University of Virginia. Inspired by the CDs he found of acts such as The Who, The Strokes, and The Grateful Dead, he recorded The Sebastions first EP, Here for Now, with the help of his fellow musicians in Kendall Street Company. He’s hoping to bring the energy of his favorite acts to the live performances of The Sebastions',
+    role: 'Singer/Songwriter',
+  },
+  {
+    name: 'Peter VanderHoeven',
+    role: 'Guitar',
+    bio:
+      'Peter is a great guitarist. His imaginative riffs and unrivaled tones over-drive The Sebastions into a realm beyond the current recorded work. He is currently studying at community college while maintaining his music and guitar studies.',
+  },
+  {
+    name: 'Patrick Horner',
+    role: 'Drums',
+    bio:
+      'Patrick is a seasoned drummer with decades of experience behind the kit. His precision and imagination land him amongst the top drummers in the area, and his knowledge of music and rhythm has expanded The Sebastions creative potential since he joined the group.',
+  },
+  {
+    name: 'Steve Attix',
+    role: 'Lead Guitar',
+    bio:
+      'Steve is a seasoned, multi-instrumentalist and lead guitarist of The Sebastions. He has decades of experience performing and teaching music. He decided to join forces with Joey and The Sebastions after hearing the Here for Now EP.',
+  },
+  {
+    name: 'Corron Stewart',
+    role: 'Bass',
+    bio:
+      'DC native and Maryland resident Corron Stewart is the bassist of The Sebastions. His Reggae background and love of The Red Hot Chili Peppers has injected fresh blood into The Sebastions’ original work. He is ardent about music and its theory, and his fat, fat bass tone glues The Sebastions together.',
+  },
+];
 // PROJECTS DATA
 export const projectsData = [
   {
@@ -60,23 +92,8 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'linkedin',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'github',
-      url: '',
+      name: 'instagram',
+      url: 'https://www.instagram.com/the_sebastions/',
     },
   ],
 };
