@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
+import ProjectImg from '../Image/ProjectImg';
 
 const Projects = () => {
-  const { projects } = useContext(PortfolioContext);
+  const { projects, carousel } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -24,7 +25,6 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          {/* <Title title="Projects" /> */}
           {projects.map((project) => {
             const { title, info, info2, url, id, section } = project;
 
@@ -39,7 +39,9 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__text" id={section}>
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                      <h3 className="project-wrapper__text-title accent">
+                        {title || 'Project Title'}
+                      </h3>
                       <div>
                         <p>
                           {info ||
@@ -47,25 +49,6 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      {/* <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
-
-                      {repo && (
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
-                          href={repo}
-                        >
-                          Source Code
-                        </a>
-                      )} */}
                     </div>
                   </Fade>
                 </Col>
@@ -98,7 +81,6 @@ const Projects = () => {
                           }}
                         >
                           <div data-tilt className="thumbnail rounded">
-                            {/* <ProjectImg alt={title} filename={img} /> */}
                             <iframe
                               src="https://open.spotify.com/embed/artist/2llQYWpEsMBFJDxFd3Tgx6"
                               width="500"
@@ -117,6 +99,34 @@ const Projects = () => {
               </Row>
             );
           })}
+          <Row>
+            <Col lg={12} sm={12}>
+              <Fade
+                right={isDesktop}
+                bottom={isMobile}
+                duration={1000}
+                delay={1000}
+                distance="30px"
+              >
+                <div className="project-wrapper__text">
+                  <h3 className="project-wrapper__text-title accent">Photos</h3>
+                </div>
+                <Carousel>
+                  {carousel.map(({ filename, alt }) => {
+                    return (
+                      <Carousel.Item key={filename}>
+                        <ProjectImg alt={alt} filename={filename} />
+                        {/* <Carousel.Caption>
+                          <h3>First slide label</h3>
+                          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption> */}
+                      </Carousel.Item>
+                    );
+                  })}
+                </Carousel>
+              </Fade>
+            </Col>
+          </Row>
         </div>
       </Container>
     </section>

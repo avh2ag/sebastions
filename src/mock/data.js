@@ -93,10 +93,40 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'instagram',
+      icon: 'instagram',
       url: 'https://www.instagram.com/the_sebastions/',
+    },
+    {
+      id: nanoid(),
+      name: 'deezer',
+      icon: 'music',
+      url: 'https://deezer.page.link/uYkZfD9yQ1Aj2fWV7',
     },
   ],
 };
+
+export const carouselData = [
+  {
+    filename: 'singer.jpeg',
+    alt: 'Singer',
+  },
+  {
+    filename: 'guitarist.jpeg',
+    alt: 'Guitarist',
+  },
+  {
+    filename: 'solo.jpeg',
+    alt: 'Guitar Solo',
+  },
+  {
+    filename: 'thesnake.jpeg',
+    alt: 'Concert at The Snake',
+  },
+  {
+    filename: 'podcast.jpeg',
+    alt: 'Podcast',
+  },
+];
 
 // Github start/fork buttons
 export const githubButtons = {

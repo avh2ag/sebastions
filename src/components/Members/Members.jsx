@@ -29,7 +29,7 @@ const Members = () => {
               {members.map((member) => (
                 <div className="member-container" key={member.name}>
                   <h2>
-                    {member.name} - {member.role}
+                    {member.name} - <span className="members__role">{member.role}</span>
                   </h2>
                   <p className="members-wrapper__info-text">{member.bio}</p>
                 </div>
