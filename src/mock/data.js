@@ -102,6 +102,12 @@ export const footerData = {
       icon: 'music',
       url: 'https://deezer.page.link/uYkZfD9yQ1Aj2fWV7',
     },
+    {
+      id: nanoid(),
+      name: 'apple music',
+      icon: 'apple',
+      url: 'https://music.apple.com/us/artist/the-sebastions/1559732336',
+    },
   ],
 };
 

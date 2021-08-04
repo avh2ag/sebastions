@@ -27,7 +27,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label={name}
                 >
-                  <i className={`fa fa-${icon || 'refresh'} fa-inverse accent-btn`} />
+                  <i className={`fa fab fa-${icon || 'refresh'} fa-inverse accent-btn`} />
                 </a>
               );
             })}
