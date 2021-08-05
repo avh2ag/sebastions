@@ -21,10 +21,6 @@
     clip-path: none;
   }
 
-  .members__role {
-    color: $accent;
-  }
-
   .about-wrapper, .members-wrapper{
     @include respond(phone) {
       padding-bottom: 5rem;
