@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import ReactPlayer from 'react-player/lazy';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
@@ -6,10 +7,12 @@ import PortfolioContext from '../../context/context';
 import ProjectImg from '../Image/ProjectImg';
 
 const Projects = () => {
-  const { projects, carousel } = useContext(PortfolioContext);
+  const { projects, photos, videos } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(null);
+  console.log(activeVideo, videos[0]);
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -19,6 +22,7 @@ const Projects = () => {
       setIsMobile(true);
       setIsDesktop(false);
     }
+    setActiveVideo(videos[0]);
   }, []);
 
   return (
@@ -109,10 +113,28 @@ const Projects = () => {
                 distance="30px"
               >
                 <div className="project-wrapper__text">
+                  <h3 className="project-wrapper__text-title accent">Videos</h3>
+                </div>
+                <div>
+                  <ReactPlayer className="react-player" url={activeVideo?.filename} controls />
+                </div>
+              </Fade>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={12} sm={12}>
+              <Fade
+                right={isDesktop}
+                bottom={isMobile}
+                duration={1000}
+                delay={1000}
+                distance="30px"
+              >
+                <div className="project-wrapper__text">
                   <h3 className="project-wrapper__text-title accent">Photos</h3>
                 </div>
                 <Carousel>
-                  {carousel.map(({ filename, alt }) => {
+                  {photos.map(({ filename, alt }) => {
                     return (
                       <Carousel.Item key={filename}>
                         <ProjectImg alt={alt} filename={filename} />

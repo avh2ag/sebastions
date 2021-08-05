@@ -111,7 +111,7 @@ export const footerData = {
   ],
 };
 
-export const carouselData = [
+export const photoData = [
   {
     filename: 'singer.jpeg',
     alt: 'Singer',
@@ -131,6 +131,13 @@ export const carouselData = [
   {
     filename: 'podcast.jpeg',
     alt: 'Podcast',
+  },
+];
+
+export const videoData = [
+  {
+    filename: 'https://www.dropbox.com/s/48ohf4qo5ifgz90/03%20Peregrine.mp4?dl=0',
+    alt: 'Peregrine',
   },
 ];
 

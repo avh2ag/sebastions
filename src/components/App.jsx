@@ -15,7 +15,8 @@ import {
   contactData,
   footerData,
   membersData,
-  carouselData,
+  photoData,
+  videoData,
 } from '../mock/data';
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
   const [members, setMembers] = useState([]);
-  const [carousel, setCarousel] = useState([]);
+  const [photos, setPhotos] = useState([]);
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     setHero({ ...heroData });
@@ -34,11 +36,12 @@ function App() {
     setContact({ ...contactData });
     setFooter({ ...footerData });
     setMembers([...membersData]);
-    setCarousel([...carouselData]);
+    setPhotos([...photoData]);
+    setVideos([...videoData]);
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer, members, carousel }}>
+    <PortfolioProvider value={{ hero, about, projects, contact, footer, members, photos, videos }}>
       <Hero />
       <About />
       <Projects />
