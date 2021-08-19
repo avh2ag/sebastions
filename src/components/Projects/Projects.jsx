@@ -106,17 +106,18 @@ const Projects = () => {
 
                 <div style={{ display: 'flex', gap: '1rem' }}>
                   {videos.map((video) => (
-                    <span key={video.name} className="cta-btn cta-btn--hero">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setActiveVideo(video);
-                          setPlaying(true);
-                        }}
-                      >
-                        {video.name}
-                      </button>
-                    </span>
+                    <button
+                      style={{ fontSize: '1.5rem' }}
+                      className="cta-btn cta-btn--hero"
+                      key={video.name}
+                      type="button"
+                      onClick={() => {
+                        setActiveVideo(video);
+                        setPlaying(true);
+                      }}
+                    >
+                      {video.name}
+                    </button>
                   ))}
                 </div>
                 <div style={{ padding: '1rem' }}>
