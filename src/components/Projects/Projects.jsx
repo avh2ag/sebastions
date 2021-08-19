@@ -11,8 +11,8 @@ const Projects = () => {
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [activeVideo, setActiveVideo] = useState(null);
-  console.log(activeVideo, videos[0]);
+  const [activeVideo, setActiveVideo] = useState(videos[0]);
+  const [isPlaying, setPlaying] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -57,13 +57,7 @@ const Projects = () => {
                   </Fade>
                 </Col>
                 <Col lg={8} sm={12}>
-                  <Fade
-                    right={isDesktop}
-                    bottom={isMobile}
-                    duration={1000}
-                    delay={1000}
-                    distance="30px"
-                  >
+                  <Fade right={isDesktop} bottom={isMobile} duration={1000} distance="30px">
                     <div className="project-wrapper__image">
                       <a
                         href={url || '#!'}
@@ -105,32 +99,41 @@ const Projects = () => {
           })}
           <Row>
             <Col lg={12} sm={12}>
-              <Fade
-                right={isDesktop}
-                bottom={isMobile}
-                duration={1000}
-                delay={1000}
-                distance="30px"
-              >
-                <div className="project-wrapper__text">
+              <Fade right={isDesktop} bottom={isMobile} duration={1000} distance="30px">
+                <div className="project-wrapper__text" id="videos">
                   <h3 className="project-wrapper__text-title accent">Videos</h3>
                 </div>
-                <div>
-                  <ReactPlayer className="react-player" url={activeVideo?.filename} controls />
+
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  {videos.map((video) => (
+                    <span key={video.name} className="cta-btn cta-btn--hero">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setActiveVideo(video);
+                          setPlaying(true);
+                        }}
+                      >
+                        {video.name}
+                      </button>
+                    </span>
+                  ))}
+                </div>
+                <div style={{ padding: '1rem' }}>
+                  <ReactPlayer
+                    controls
+                    className="react-player"
+                    playing={isPlaying}
+                    url={activeVideo?.url}
+                  />
                 </div>
               </Fade>
             </Col>
           </Row>
           <Row>
             <Col lg={12} sm={12}>
-              <Fade
-                right={isDesktop}
-                bottom={isMobile}
-                duration={1000}
-                delay={1000}
-                distance="30px"
-              >
-                <div className="project-wrapper__text">
+              <Fade right={isDesktop} bottom={isMobile} duration={1000} distance="30px">
+                <div className="project-wrapper__text" id="photos">
                   <h3 className="project-wrapper__text-title accent">Photos</h3>
                 </div>
                 <Carousel>

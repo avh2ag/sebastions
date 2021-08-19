@@ -24,7 +24,7 @@ const Members = () => {
       <Container>
         <Title title="Members" />
         <div className="members-wrapper">
-          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+          <Fade left={isDesktop} bottom={isMobile} duration={1000} distance="30px">
             <div className="members-wrapper__info">
               {members.map((member) => (
                 <div className="member-container" key={member.name}>

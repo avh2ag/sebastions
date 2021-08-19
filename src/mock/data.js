@@ -92,6 +92,12 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
+      name: 'youtube',
+      icon: 'youtube',
+      url: 'https://www.youtube.com/channel/UCd2JJUL3GyiaofPcjAI5o0Q',
+    },
+    {
+      id: nanoid(),
       name: 'instagram',
       icon: 'instagram',
       url: 'https://www.instagram.com/the_sebastions/',
@@ -136,8 +142,12 @@ export const photoData = [
 
 export const videoData = [
   {
-    filename: 'https://www.dropbox.com/s/48ohf4qo5ifgz90/03%20Peregrine.mp4?dl=0',
-    alt: 'Peregrine',
+    url: 'https://s3.amazonaws.com/sebastions.com/videos/03+Peregrine.mp4',
+    name: 'Peregrine',
+  },
+  {
+    url: 'https://s3.amazonaws.com/sebastions.com/videos/alexandria-video.mov',
+    name: 'Alexandria',
   },
 ];
 
